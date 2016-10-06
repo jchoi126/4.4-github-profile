@@ -7,8 +7,81 @@
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>4.4 Github Repository</title>
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <header>
+      
+    </header>
 
-    <h1>Hello World!</h1>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div id="profile-bar">
+            <div>
+              <p>Add a bio</p>
+              <button>Edit profile</button>
+            </div>
+            <div class="card">
+              <div id="profile-info"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <ul id="repositories">
+          </ul>
+        </div>
+      </div>
+    </div>
+<!-- Template: profile photo, name and user name -->
+    <script id="profile-bar-template" type="text/x-handlebars-template">
+      <div>
+        <img src="{{avatar_url}}" alt="profile image">
+          <div id="profile-name">
+            <span id="fullname">{{name}}</span>
+            <span id="login">{{login}}</span>
+          </div>
+        </div>
+      </script>
+<!-- Template: business card -->
+    <script id="profile-info-template" type="text/x-handlebars-template">
+      <div>
+          <div>
+            <span id="location">{{location}}</span>
+            <span id="email">{{email}}</span>
+            <span id="blog">{{blog}}</span>
+            <span id="Joined">{{created_at}}</span>
+          </div>
+        </div>
+      </script>
+<!-- Template: repositories -->
+      <script id="repositories-template" type="text/x-handlebars-template">
+        <div>
+            <div>
+              <span id="repository-title">{{name}}</span>
+              <span id="language">{{language}}</span>
+              <span id="star">{{stargazers_count}}</span>
+            </div>
+          </div>
+        </script>
+
+    <!-- <form method="post">
+      <input type="text" name="name" value="" placeholder="Your Name">
+      <input type="text" name="dog_name" value="" placeholder="Your Dog's Name">
+      <input type="submit" value="Send Data">
+    </form>
+
+
+    <script src="js/bundle.js"></script>
+  </body>
+</html></h1>
 
     <script src="js/bundle.js"></script>
   </body>
