@@ -12,15 +12,202 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
   box-sizing: border-box;
 }
 
+.container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+h4{
+  font-size: 17px;
+}
+
+.top-logo{
+  float: left;
+  text-height: 12px;
+  width: 22px;
+  height: 22px;
+}
+
+.octicon-mark-github::before{
+  font-size: 28px;
+}
+
+.right{
+  margin-left: auto;
+  display: inline-flex;
+}
+
+.float-left{
+  float: left;
+  margin-right: 10px;
+  display: flex;
+}
+
+.col-xs-2{
+  width: 20.6%;
+}
+
+.button{
+  position: relative;
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #333;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: #eee;
+  background-image: -webkit-linear-gradient(#fcfcfc, #eee);
+  background-image: linear-gradient(#fcfcfc, #eee);
+  border: 1px solid #d5d5d5;
+  border-radius: 3px;
+  margin-bottom: 12px;
+}
+
+.button i{
+  font-style: normal;
+  font-weight: 500;
+  opacity: 0.6;
+}
+
+.padzero{
+  padding: 0px;
+}
+
+.marzero{
+  margin: 4px 0px 4px 0px;
+}
+
+.repo-html{
+  display: inline-block;
+  margin-left: auto;
+  color: #767676;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#star{
+  color: #767676;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.new-btn{
+  margin: 0px;
+  padding: 0px;
+}
+
+
+.rep-button{
+
+}
+
+.btn-block{
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.well{
+  border-radius: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.blue{
+  color: #407CC1;
+}
+
+.searchbar{
+  width: 360px;
+  height: 28px;
+  margin-right: 24px;
+}
+
+.padN{
+  float: left;
+  margin-right: 4px
+}
+
+.new-button{
+  background-image: linear-gradient(#79d858, #569e3d);
+  background-color: #569e3d;
+  border-color: #5CA941;
+  color: white;
+}
+
+.repo-bar{
+  width: 375px;
+  float: left;
+}
+
+.right-avatar{
+  height: 20px;
+  width: 20px;
+}
+
+.octicon-triangle-down::before {
+    font-size: 11px;
+}
+
+.vcard{
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.vcard-list{
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 4px;
+  // float: left;
+}
+
+.nav-item{
+  padding: 4px 8px;
+  float: left;
+  list-style: none;
+}
+
+.nav-itemr{
+  padding: 4px 8px;
+  margin-left: auto;
+   list-style: none;
+}
+
+.organization-image{
+  height: 35px;
+  width: 35px;
+  border-radius: 3px;
+}
+
+#logo{
+  width: 33px;
+  height: 33px;
+}
+
 img {
   max-width: 100%;
 }
 
+.profile-photo{
+  display: inline-block;
+  overflow: hidden;
+  line-height: 1;
+  vertical-align: middle;
+  border-radius: 6px
+}
+
 #profile-name{
-  // position: static;
-  // top: 0px;
-  // left: 149.5px;
-  // width: 233px;
+  position: static;
+  top: 0px;
+  left: 149.5px;
+  width: 233px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 #fullname{
@@ -34,9 +221,102 @@ img {
   font-weight: 300;
   line-height: 24px;
   color: #666;
+  display: block;
 }
 
 .card{
   border-top: 1px solid #EEEEEE;
   border-bottom: 1px solid #EEEEEE;
+}
+
+.organization{
+  display: inline-block;
+}
+
+.repository-nav{
+  height: 63px;
+  display: flex;
+  border-bottom: 1px solid #e5e5e5;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.counter {
+    display: inline-block;
+    padding: 2px 5px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    color: #666;
+    background-color: #eee;
+    border-radius: 20px;
+}
+
+.repository-nav a{
+  padding: 20px;
+  color: #767676;
+}
+
+.underline{
+  border-bottom: 2px solid #c9510c;
+}
+
+.form-control{
+  height: 34px;
+}
+
+.inline-block{
+  display: inline-block;
+}
+
+.repository-search{
+  padding-top: 12px;
+  border-bottom: 1px solid #e5e5e5;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.repository{
+  display: flex;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  font-size: 16px;
+  color: #4078C0;
+  font-weight: 600;
+  border-bottom: 1px solid #EEEEEE;
+  margin-right: -30px;
+}
+
+.epic-circle, {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-left: 12px;
+    border-radius: 50%;
+}
+
+.epic-circle-HTML{
+    @extend .epic-circle;
+    background-color: #e44b23;
+}
+
+.epic-circle-JavaScript{
+    @extend .epic-circle;
+    background-color: #f1e05a;
+}
+
+.epic-circle-CSS{
+    @extend .epic-circle;
+    background-color: #563d7c;
+}
+
+.epic-circle-Shell{
+    @extend .epic-circle;
+    background-color: #89e051;
+}
+
+.star{
+  padding: none;
 }

@@ -3,47 +3,76 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>4 4 github profile</title>
-    <link rel="stylesheet" href="css/app.css">
-  </head>
-  <body>
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>4.4 Github Repository</title>
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css">
   </head>
   <body>
-    <header>
-      
+  <div class="well">
+    <header class="container">
+      <span class="float-left"><span class="float-left octicon octicon-mark-github top-logo"></span></span>
+        <span class="float-left">
+          <input type="text" class="form-control searchbar" placeholder="Search GitHub">
+        </span>
+      <div class="float-left">
+        <li class="nav-item float-left">Pull requests</li>
+        <li class="nav-item float-left">Issues</li>
+        <li class="nav-item float-left">Gist</li>
+      </div>
+      <div class="right">
+        <li class="nav-itemr right"><span class="octicon octicon-plus"> <span class="octicon octicon-triangle-down"></span></span></li>
+        <li class="nav-itemr right"><span><img class="right-avatar" src="https://avatars.githubusercontent.com/u/21251730?v=3" alt=""> <span class="octicon octicon-triangle-down"></span></span></li>
+      </div>
     </header>
-
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <div id="profile-bar">
-            <div>
-              <p>Add a bio</p>
-              <button>Edit profile</button>
-            </div>
-            <div class="card">
-              <div id="profile-info"></div>
-            </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div id="profile-bar">
+          <div>
+            <p class="blue">Add a bio</p>
+            <button class="button btn-block">Edit profile</button>
+          </div>
+          <div class="card">
+            <div id="profile-info"></div>
           </div>
         </div>
-        <div class="col-md-9">
-          <ul id="repositories">
-          </ul>
+        <div class="organization">
+          <h4>Organizations</h4>
+          <img class="organization-image" src="https://avatars.githubusercontent.com/u/20672988?v=3" alt="">
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="repository-nav row">
+          <a href="">Overviews</a>
+            <a class="underline" href="">Repositories <span class="counter">16</span></a>
+          <a href="">Stars <span class="counter">1</span></a>
+          <a href="">Followers <span class="counter">0</span></a>
+          <a href="">Following <span class="counter">0</span></a>
+        </div>
+        <div class="repository-search row">
+          <span class="">
+            <input type="text" class="form-control searchbar repo-bar" placeholder="Search repositories...">
+          </span>
+          <span class="padN">
+            <button class="button rep-button"><i>Type</i> <span>All <span class="octicon octicon-triangle-down"></span></span></button>
+          </span>
+          <span class="float-left">
+            <button class="button rep-button"><i>Language </i>All <span class="octicon octicon-triangle-down"></button>
+          </span>
+          <span class="float-left new-btn">
+            <button class="button new-button"><span class="octicon octicon-repo"></span> New</button>
+          </span>
+        </div>
+        <div id="repositories">
         </div>
       </div>
     </div>
+  </div>
 <!-- Template: profile photo, name and user name -->
     <script id="profile-bar-template" type="text/x-handlebars-template">
       <div>
-        <img src="{{avatar_url}}" alt="profile image">
+        <img class="profile-photo" src="{{avatar_url}}" alt="profile image">
           <div id="profile-name">
             <span id="fullname">{{name}}</span>
             <span id="login">{{login}}</span>
@@ -53,35 +82,49 @@
 <!-- Template: business card -->
     <script id="profile-info-template" type="text/x-handlebars-template">
       <div>
-          <div>
-            <span id="location">{{location}}</span>
-            <span id="email">{{email}}</span>
-            <span id="blog">{{blog}}</span>
-            <span id="Joined">{{created_at}}</span>
+          <div class="vcard">
+            <div class="row marzero">
+              <span class="octicon octicon-location"></span>
+              <span class="vcard-list" id="location">{{location}}</span>
+            </div>
+            <div class="row marzero">
+              <span class="octicon octicon-mail"></span>
+              <span class="vcard-list blue" id="email">{{email}}</span>
+            </div>
+            <div class="row marzero">
+              <span class="octicon octicon-link"></span>
+              <span class="vcard-list blue" id="blog">{{blog}}</span>
+            </div>
+            <div class="row marzero">
+              <span class="octicon octicon-clock"></span>
+              <span class="vcard-list" id="Joined">{{created_at}}</span>
+            </div>
           </div>
         </div>
       </script>
+<!-- Template: Organization -->
+      <div>
+
+      </div>
+
 <!-- Template: repositories -->
       <script id="repositories-template" type="text/x-handlebars-template">
-        <div>
-            <div>
-              <span id="repository-title">{{name}}</span>
-              <span id="language">{{language}}</span>
-              <span id="star">{{stargazers_count}}</span>
+        <div class="col-xs-12 row">
+            <div class="repository">
+              <div class="col-xs-6 padzero">
+                <span id="repository-title">{{name}}</span>
+              </div>
+              <div class="col-xs-2"></div>
+              <div class="col-xs-2 right repo-html">
+                <span id="language" class="epic-circle-{{language}}"></span>
+                <span id="language" >{{language}}</span>
+              </div>
+              <div class="col-xs-1 star">
+                <span id="star"><span class="octicon octicon-star"></span> {{stargazers_count}}</span>
+              </div>
             </div>
           </div>
         </script>
-
-    <!-- <form method="post">
-      <input type="text" name="name" value="" placeholder="Your Name">
-      <input type="text" name="dog_name" value="" placeholder="Your Dog's Name">
-      <input type="submit" value="Send Data">
-    </form>
-
-
-    <script src="js/bundle.js"></script>
-  </body>
-</html></h1>
 
     <script src="js/bundle.js"></script>
   </body>

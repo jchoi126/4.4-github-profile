@@ -14,10 +14,10 @@ if(githubtoken !== undefined){
 $.ajax('https://api.github.com/users/jchoi126').then(displayProfile);
 function displayProfile(data){
  var profiledata = data;
-console.log(data);
  var $profileContainer = $('#profile-bar');
  var source = $('#profile-bar-template').html();
  var template = Handlebars.compile(source);
+ console.log(template);
 // be sure to know when to use append and prepend.
 $profileContainer.prepend(template(profiledata));
  // _.each(profiledata, function(profilebar){
